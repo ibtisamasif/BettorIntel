@@ -4,8 +4,23 @@ import {createAppContainer} from 'react-navigation';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
 import {createStackNavigator} from 'react-navigation-stack';
  
+import HistoryScreen from './pages/HistoryScreen';
 import HomeScreen from './pages/HomeScreen';
 import CashierScreen from './pages/CashierScreen';
+const HistoryStack = createStackNavigator(
+  {
+    History: { screen: HistoryScreen }
+  },
+  {
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: '#42f44b',
+      },
+      headerTintColor: '#FFFFFF',
+      title: 'History'
+    },
+  }
+);
 const HomeStack = createStackNavigator(
   {
     Home: { screen: HomeScreen }
@@ -16,8 +31,7 @@ const HomeStack = createStackNavigator(
         backgroundColor: '#42f44b',
       },
       headerTintColor: '#FFFFFF',
-      title: 'Home',
-      //Header title
+      title: 'Home'
     },
   }
 );
@@ -31,13 +45,13 @@ const CashierStack = createStackNavigator(
         backgroundColor: '#42f44b',
       },
       headerTintColor: '#FFFFFF',
-      title: 'Cashier',
-      //Header title
+      title: 'Cashier'
     },
   }
 );
 const App = createBottomTabNavigator(
   {
+    History: { screen: HistoryStack },
     Home: { screen: HomeStack },
     Cashier: { screen: CashierStack },
   },
@@ -49,6 +63,8 @@ const App = createBottomTabNavigator(
         let iconName;
         if (routeName === 'Home') {
           iconName = `ios-information-circle${focused ? '' : '-outline'}`;
+        } else if (routeName === 'History') {
+          iconName = `ios-checkmark-circle${focused ? '' : '-outline'}`;
         } else if (routeName === 'Cashier') {
           iconName = `ios-checkmark-circle${focused ? '' : '-outline'}`;
         }
