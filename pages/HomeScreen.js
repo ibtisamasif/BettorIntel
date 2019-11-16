@@ -3,7 +3,7 @@
 //import { DataTable } from 'react-native-paper';
 import React, { Component } from 'react';
 import { StyleSheet, View, ScrollView } from 'react-native';
-import { Table, TableWrapper, Row} from 'react-native-table-component';
+import { Table, Row} from 'react-native-table-component';
 export default class HomeScreen extends React.Component {
   
   
