@@ -1,8 +1,13 @@
-import React from 'react';
+import React, {Component} from 'react';
+import { View, StyleSheet, Dimensions } from 'react-native';
+import { TabView, TabBar, SceneMap } from 'react-native-tab-view';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {createAppContainer} from 'react-navigation';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
 import {createStackNavigator} from 'react-navigation-stack';
+
+
+
  
 import HistoryScreen from './pages/HistoryScreen';
 import HomeScreen from './pages/HomeScreen';
@@ -49,6 +54,10 @@ const CashierStack = createStackNavigator(
     },
   }
 );
+
+
+
+
 const App = createBottomTabNavigator(
   {
     History: { screen: HistoryStack },

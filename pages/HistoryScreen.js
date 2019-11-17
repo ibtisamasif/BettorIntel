@@ -23,6 +23,16 @@ export default class HistoryScreen extends React.Component {
     return (
      <View> 
       
+      <View style={styles.containernav}>
+      <View style={styles.navBar}>
+        <Text style={styles.navBarButton}>Back</Text>
+        <Text style={styles.navBarHeader}>Awesome App</Text>
+        <Text style={styles.navBarButton}>More</Text>
+      </View>
+      
+    </View>
+
+
       <View>
       <Text>
         Bezier Line Chart
@@ -75,6 +85,30 @@ export default class HistoryScreen extends React.Component {
 
 
 const styles = StyleSheet.create({
+  
+  containernav: {
+    flex: 0,
+    backgroundColor: '#374046',
+    
+  },
+  navBarButton: {
+    color: '#FFFFFF',
+    textAlign:'center',
+    width: 64
+  },
+  navBarHeader: {
+    flex: 1,
+    color: '#FFFFFF',
+    fontWeight: 'bold',
+    textAlign: 'center'
+  },
+  navBar: {
+    flexDirection: 'row',
+    paddingTop: 30,
+    height: 64,
+    backgroundColor: '#1EAAF1'
+  },
+  
   container: {padding: 16, paddingTop: 10, backgroundColor: '#fff' },
   head: { height: 40, backgroundColor: '#f1f8ff' },
   text: { margin: 6 }
