@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-import { View, StyleSheet, Dimensions } from 'react-native';
-import { TabView, TabBar, SceneMap } from 'react-native-tab-view';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {createAppContainer} from 'react-navigation';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
@@ -22,7 +20,8 @@ const HistoryStack = createStackNavigator(
         backgroundColor: '#42f44b',
       },
       headerTintColor: '#FFFFFF',
-      title: 'History'
+      title: 'History',
+      header:null,
     },
   }
 );
@@ -36,7 +35,8 @@ const HomeStack = createStackNavigator(
         backgroundColor: '#42f44b',
       },
       headerTintColor: '#FFFFFF',
-      title: 'Home'
+      title: 'Home',
+      header:null,
     },
   }
 );
@@ -50,7 +50,8 @@ const CashierStack = createStackNavigator(
         backgroundColor: '#42f44b',
       },
       headerTintColor: '#FFFFFF',
-      title: 'Cashier'
+      title: 'Cashier',
+      header:null,
     },
   }
 );

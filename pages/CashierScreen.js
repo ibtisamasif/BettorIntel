@@ -1,56 +1,56 @@
 import React from 'react';
-import { Alert,Text, View, TouchableOpacity, StyleSheet, Dimensions } from 'react-native';
+import { Alert, Text, View, TouchableOpacity, StyleSheet, Dimensions } from 'react-native';
 
 import { TabView, TabBar, SceneMap } from 'react-native-tab-view';
 
 
 export default class CashierScreen extends React.Component {
-  _onPressButton() {  
-    Alert.alert('You tapped the button!')  
-}  
+  _onPressButton() {
+    Alert.alert('You tapped the button!')
+  }
 
-_onLongPressButton() {  
-    Alert.alert('You long-pressed the button!')  
-}  
+  _onLongPressButton() {
+    Alert.alert('You long-pressed the button!')
+  }
 
-  
-  
+
+
   render() {
     return (
 
-    <View>  
-      <View style={styles.container}>
-      <View style={styles.navBar}>
-        <Text style={styles.navBarButton}>Back</Text>
-        <Text style={styles.navBarHeader}>Awesome App</Text>
-        <Text style={styles.navBarButton}>More</Text>
+      <View>
+        <View style={styles.container}>
+          <View style={styles.navBar}>
+            <Text style={styles.navBarButton}>Immortal</Text>
+            <Text style={styles.navBarHeader}>ImageCircle</Text>
+            <Text style={styles.navBarButton}>Picks</Text>
+          </View>
+
+        </View>
+
+
+        <View style={{ justifyContent: 'center', alignItems: 'center', paddingTop: 5 }}>
+
+
+
+          <TouchableOpacity onPress={this._onPressButton} onLongPress={this._onLongPressButton}>
+            <View style={styles.button}>
+              <Text style={styles.buttonText}>$14.99 for 20 gems</Text>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={this._onPressButton} onLongPress={this._onLongPressButton}>
+            <View style={styles.button}>
+              <Text style={styles.buttonText}>$34.99 for 50 gems</Text>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={this._onPressButton} onLongPress={this._onLongPressButton}>
+            <View style={styles.button}>
+              <Text style={styles.buttonText}>$99.99 for 1 year Unlimited</Text>
+            </View>
+          </TouchableOpacity>
+
+        </View>
       </View>
-      
-    </View>
-
-
-      <View style={{ justifyContent: 'center', alignItems: 'center',paddingTop:5 }}>
-
-
-
-        <TouchableOpacity onPress={this._onPressButton} onLongPress={this._onLongPressButton}>  
-                    <View style={styles.button}>  
-                        <Text style={styles.buttonText}>TouchableOpacity</Text>  
-                    </View>  
-                </TouchableOpacity>
-                <TouchableOpacity onPress={this._onPressButton} onLongPress={this._onLongPressButton}>  
-                    <View style={styles.button}>  
-                        <Text style={styles.buttonText}>TouchableOpacity</Text>  
-                    </View>  
-                </TouchableOpacity>
-                <TouchableOpacity onPress={this._onPressButton} onLongPress={this._onLongPressButton}>  
-                    <View style={styles.button}>  
-                        <Text style={styles.buttonText}>TouchableOpacity</Text>  
-                    </View>  
-                </TouchableOpacity>
-                
-      </View>
-     </View>  
     );
   }
 }
@@ -58,11 +58,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 0,
     backgroundColor: '#374046',
-    
+
   },
   navBarButton: {
     color: '#FFFFFF',
-    textAlign:'center',
+    textAlign: 'center',
     width: 64
   },
   navBarHeader: {
@@ -87,15 +87,15 @@ const styles = StyleSheet.create({
   text: {
     color: '#EEEEEE'
   },
-  button: {  
-    marginBottom: 30,  
-    width: 260,  
-    alignItems: 'center',  
-    backgroundColor: '#5ead97'  
-},  
-buttonText: {  
-    padding: 20,  
-    color: 'white',  
-    fontSize: 18 
-  } 
+  button: {
+    marginBottom: 30,
+    width: 260,
+    alignItems: 'center',
+    backgroundColor: '#5ead97'
+  },
+  buttonText: {
+    padding: 20,
+    color: 'white',
+    fontSize: 18
+  }
 });

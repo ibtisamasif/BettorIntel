@@ -16,84 +16,84 @@ export default class HistoryScreen extends React.Component {
       ]
     }
   }
- 
 
-   render() {
+
+  render() {
     const state = this.state;
     return (
-     <View> 
-      
-      <View style={styles.containernav}>
-      <View style={styles.navBar}>
-        <Text style={styles.navBarButton}>Back</Text>
-        <Text style={styles.navBarHeader}>Awesome App</Text>
-        <Text style={styles.navBarButton}>More</Text>
-      </View>
-      
-    </View>
-
-
       <View>
-      <Text>
-        Bezier Line Chart
+
+        <View style={styles.containernav}>
+          <View style={styles.navBar}>
+            <Text style={styles.navBarButton}>Immortal</Text>
+            <Text style={styles.navBarHeader}>ImageCircle</Text>
+            <Text style={styles.navBarButton}>Picks</Text>
+          </View>
+
+        </View>
+
+
+        <View>
+          <Text>
+            Bezier Line Chart
       </Text>
-      <LineChart
-        data={{
-          labels: ['January', 'February', 'March', 'April', 'May', 'June'],
-          datasets: [{
-            data: [
-              Math.random() * 100,
-              Math.random() * 100,
-              Math.random() * 100,
-              Math.random() * 100,
-              Math.random() * 100,
-              Math.random() * 100
-            ]
-          }]
-        }}
-        width={Dimensions.get('window').width} // from react-native
-        height={220}
-        chartConfig={{
-          backgroundColor: '#e26a00',
-          backgroundGradientFrom: '#fb8c00',
-          backgroundGradientTo: '#ffa726',
-          decimalPlaces: 2, // optional, defaults to 2dp
-          color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
-          style: {
-            borderRadius: 16
-          }
-        }}
-        bezier
-        style={{
-          marginVertical: 8,
-          borderRadius: 16
-        }}
-      />
-    </View>
+          <LineChart
+            data={{
+              labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+              datasets: [{
+                data: [
+                  Math.random() * 100,
+                  Math.random() * 100,
+                  Math.random() * 100,
+                  Math.random() * 100,
+                  Math.random() * 100,
+                  Math.random() * 100
+                ]
+              }]
+            }}
+            width={Dimensions.get('window').width} // from react-native
+            height={220}
+            chartConfig={{
+              backgroundColor: '#e26a00',
+              backgroundGradientFrom: '#fb8c00',
+              backgroundGradientTo: '#ffa726',
+              decimalPlaces: 2, // optional, defaults to 2dp
+              color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
+              style: {
+                borderRadius: 16
+              }
+            }}
+            bezier
+            style={{
+              marginVertical: 8,
+              borderRadius: 16
+            }}
+          />
+        </View>
 
-    <View style={styles.container}>
-        <Table borderStyle={{borderWidth: 2, borderColor: '#c8e1ff'}}>
-          <Row data={state.tableHead} style={styles.head} textStyle={styles.text}/>
-          <Rows data={state.tableData} textStyle={styles.text}/>
-        </Table>
+        <View style={styles.container}>
+          <Table borderStyle={{ borderWidth: 2, borderColor: '#c8e1ff' }}>
+            <Row data={state.tableHead} style={styles.head} textStyle={styles.text} />
+            <Rows data={state.tableData} textStyle={styles.text} />
+          </Table>
+        </View>
       </View>
-</View>
 
-)  
-}
+    )
+  }
 }
 
 
 const styles = StyleSheet.create({
-  
+
   containernav: {
     flex: 0,
     backgroundColor: '#374046',
-    
+
   },
   navBarButton: {
     color: '#FFFFFF',
-    textAlign:'center',
+    textAlign: 'center',
     width: 64
   },
   navBarHeader: {
@@ -108,8 +108,8 @@ const styles = StyleSheet.create({
     height: 64,
     backgroundColor: '#1EAAF1'
   },
-  
-  container: {padding: 16, paddingTop: 10, backgroundColor: '#fff' },
+
+  container: { padding: 16, paddingTop: 10, backgroundColor: '#fff' },
   head: { height: 40, backgroundColor: '#f1f8ff' },
   text: { margin: 6 }
 });
