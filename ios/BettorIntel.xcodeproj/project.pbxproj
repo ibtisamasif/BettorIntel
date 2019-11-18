@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* BettorIntelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* BettorIntelTests.m */; };
 		13588B62A69E4566BF6B439E /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 315F19525C384A01B05DCA55 /* Entypo.ttf */; };

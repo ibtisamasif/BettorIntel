@@ -1,9 +1,7 @@
-//import React, { Component } from 'react';
-//import { StyleSheet, View, Text, TouchableOpacity, Alert } from 'react-native';
-//import { DataTable } from 'react-native-paper';
 import React, { Component } from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text,ScrollView } from 'react-native';
 import { Table, Row } from 'react-native-table-component';
+import LinearGradient from 'react-native-linear-gradient';
 export default class HomeScreen extends React.Component {
 
 
@@ -25,7 +23,14 @@ export default class HomeScreen extends React.Component {
   render() {
     const state = this.state;
     return (
-      <View>
+<LinearGradient 
+     colors={['#6e45e2', '#88d3ce']}
+     style = { styles.containerg }>
+
+      
+
+       <View style={{flex:1}}>
+
 
         <View style={styles.containernav}>
           <View style={styles.navBar}>
@@ -35,11 +40,13 @@ export default class HomeScreen extends React.Component {
           </View>
 
         </View>
-
+        
         <View style={styles.container}>
-
-
+        <ScrollView style={styles.dataWrapper}>
+          
+       
           <Table borderStyle={{ borderWidth: 2, borderColor: '#c8e1ff' }}>
+         
             <Row data={state.tableHead} widthArr={[160, 83, 83]} style={styles.head} textStyle={styles.text} />
 
             <Row data={state.tableData} widthArr={state.widthArr} textStyle={styles.text} />
@@ -51,25 +58,34 @@ export default class HomeScreen extends React.Component {
             <Row data={state.tableData} widthArr={state.widthArr} textStyle={styles.text} />
             <Row data={state.tableData} widthArr={state.widthArr} textStyle={styles.text} />
             <Row data={state.tableData} widthArr={state.widthArr} textStyle={styles.text} />
-
+            
           </Table>
-
-        </View>
-
+          </ScrollView> 
+        
+       
       </View>
-
-
+       
+      </View>
+      </LinearGradient>  
+   
     )
   }
 
 }
 
 const styles = StyleSheet.create({
+  dataWrapper: { marginTop: -1 },
   containernav: {
     flex: 0,
     backgroundColor: '#374046',
 
   },
+  containerg: {
+    flex: 1,
+    backgroundColor: '#854046',
+
+  },
+
   navBarButton: {
     color: '#FFFFFF',
     textAlign: 'center',

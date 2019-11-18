@@ -2,6 +2,7 @@ import React from 'react';
 import { Text, View, TouchableOpacity, StyleSheet, Dimensions } from 'react-native';
 import { LineChart } from 'react-native-line-chart'
 import { Table, Row, Rows } from 'react-native-table-component';
+import LinearGradient from 'react-native-linear-gradient';
 
 export default class HistoryScreen extends React.Component {
   constructor(props) {
@@ -21,6 +22,8 @@ export default class HistoryScreen extends React.Component {
   render() {
     const state = this.state;
     return (
+     
+      
       <View>
 
         <View style={styles.containernav}>
@@ -85,6 +88,10 @@ export default class HistoryScreen extends React.Component {
 
 
 const styles = StyleSheet.create({
+
+  containerg: {
+    flex: 1,
+    },
 
   containernav: {
     flex: 0,

@@ -2,6 +2,7 @@ import React from 'react';
 import { Alert, Text, View, TouchableOpacity, StyleSheet, Dimensions } from 'react-native';
 
 import { TabView, TabBar, SceneMap } from 'react-native-tab-view';
+import LinearGradient from 'react-native-linear-gradient';
 
 
 export default class CashierScreen extends React.Component {
@@ -17,7 +18,11 @@ export default class CashierScreen extends React.Component {
 
   render() {
     return (
-
+<LinearGradient 
+     colors={['pink','blue']}
+     style = { styles.containerg }
+     start={{ x: 1, y: 1 }}
+end={{ x: 0, y: 1.5 }}>     
       <View>
         <View style={styles.container}>
           <View style={styles.navBar}>
@@ -29,7 +34,7 @@ export default class CashierScreen extends React.Component {
         </View>
 
 
-        <View style={{ justifyContent: 'center', alignItems: 'center', paddingTop: 5 }}>
+        <View style={{ justifyContent: 'center', alignItems: 'center', paddingTop: 70 }}>
 
 
 
@@ -51,31 +56,44 @@ export default class CashierScreen extends React.Component {
 
         </View>
       </View>
+
+      </LinearGradient>
+
     );
   }
 }
 const styles = StyleSheet.create({
+  containerg: {
+    flex: 1,
+    
+
+  },
+
   container: {
     flex: 0,
-    backgroundColor: '#374046',
+    //backgroundColor: '#374046',
 
   },
   navBarButton: {
-    color: '#FFFFFF',
+    color: 'blue',
     textAlign: 'center',
-    width: 64
+    width: 85,
+    marginLeft:10,
+    fontWeight: 'bold',
+    fontSize:20,
+    
   },
   navBarHeader: {
     flex: 1,
-    color: '#FFFFFF',
-    fontWeight: 'bold',
+    color: 'blue',
+    
     textAlign: 'center'
   },
   navBar: {
     flexDirection: 'row',
     paddingTop: 30,
     height: 64,
-    backgroundColor: '#1EAAF1'
+   // backgroundColor: '#1EAAF1'
   },
 
   content: {
@@ -91,11 +109,13 @@ const styles = StyleSheet.create({
     marginBottom: 30,
     width: 260,
     alignItems: 'center',
-    backgroundColor: '#5ead97'
+    backgroundColor: 'white',
+    borderRadius:25,
   },
   buttonText: {
-    padding: 20,
-    color: 'white',
-    fontSize: 18
+    padding: 19,
+    color: 'blue',
+    fontSize: 18,
+    fontWeight:"bold",
   }
 });
