@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  Text,
-  View,
-  StyleSheet,
-  Dimensions,
-} from 'react-native';
+import {Text, View, StyleSheet, Dimensions} from 'react-native';
 import {LineChart} from 'react-native-line-chart';
 import {Table, Row, Rows} from 'react-native-table-component';
 
