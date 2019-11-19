@@ -3,10 +3,6 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import {createAppContainer} from 'react-navigation';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
 import {createStackNavigator} from 'react-navigation-stack';
-
-
-
- 
 import HistoryScreen from './pages/HistoryScreen';
 import HomeScreen from './pages/HomeScreen';
 import CashierScreen from './pages/CashierScreen';
@@ -55,9 +51,6 @@ const CashierStack = createStackNavigator(
     },
   }
 );
-
-
-
 
 const App = createBottomTabNavigator(
   {
