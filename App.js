@@ -1,18 +1,14 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {createAppContainer} from 'react-navigation';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
 import {createStackNavigator} from 'react-navigation-stack';
-
-
-
- 
 import HistoryScreen from './pages/HistoryScreen';
 import HomeScreen from './pages/HomeScreen';
 import CashierScreen from './pages/CashierScreen';
 const HistoryStack = createStackNavigator(
   {
-    History: { screen: HistoryScreen }
+    History: {screen: HistoryScreen},
   },
   {
     defaultNavigationOptions: {
@@ -21,13 +17,13 @@ const HistoryStack = createStackNavigator(
       },
       headerTintColor: '#FFFFFF',
       title: 'History',
-      header:null,
+      header: null,
     },
-  }
+  },
 );
 const HomeStack = createStackNavigator(
   {
-    Home: { screen: HomeScreen }
+    Home: {screen: HomeScreen},
   },
   {
     defaultNavigationOptions: {
@@ -36,13 +32,13 @@ const HomeStack = createStackNavigator(
       },
       headerTintColor: '#FFFFFF',
       title: 'Home',
-      header:null,
+      header: null,
     },
-  }
+  },
 );
 const CashierStack = createStackNavigator(
   {
-    Cashier: { screen: CashierScreen }
+    Cashier: {screen: CashierScreen},
   },
   {
     defaultNavigationOptions: {
@@ -51,24 +47,21 @@ const CashierStack = createStackNavigator(
       },
       headerTintColor: '#FFFFFF',
       title: 'Cashier',
-      header:null,
+      header: null,
     },
-  }
+  },
 );
-
-
-
 
 const App = createBottomTabNavigator(
   {
-    History: { screen: HistoryStack },
-    Home: { screen: HomeStack },
-    Cashier: { screen: CashierStack },
+    History: {screen: HistoryStack},
+    Home: {screen: HomeStack},
+    Cashier: {screen: CashierStack},
   },
   {
-    defaultNavigationOptions: ({ navigation }) => ({
-      tabBarIcon: ({ focused, horizontal, tintColor }) => {
-        const { routeName } = navigation.state;
+    defaultNavigationOptions: ({navigation}) => ({
+      tabBarIcon: ({focused, horizontal, tintColor}) => {
+        const {routeName} = navigation.state;
         let IconComponent = Ionicons;
         let iconName;
         if (routeName === 'Home') {
@@ -85,6 +78,6 @@ const App = createBottomTabNavigator(
       activeTintColor: '#42f44b',
       inactiveTintColor: 'gray',
     },
-  }
+  },
 );
 export default createAppContainer(App);
