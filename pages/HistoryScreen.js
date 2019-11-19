@@ -4,6 +4,7 @@ import { LineChart } from 'react-native-line-chart'
 import { Table, Row, Rows } from 'react-native-table-component';
 import LinearGradient from 'react-native-linear-gradient';
 
+
 export default class HistoryScreen extends React.Component {
   constructor(props) {
     super(props);
@@ -21,6 +22,29 @@ export default class HistoryScreen extends React.Component {
 
   render() {
     const state = this.state;
+    const screenWidth = Dimensions.get("window").width;
+
+const data = {
+  labels: ["January", "February", "March", "April", "May", "June"],
+  datasets: [
+    {
+      data: [20, 45, 28, 80, 99, 43],
+      color: (opacity = 1) => `rgba(134, 65, 244, ${opacity})`, // optional
+      strokeWidth: 2 // optional
+    }
+  ]
+};
+
+const chartConfig = {
+  backgroundGradientFrom: "#1E2923",
+  backgroundGradientFromOpacity: 0,
+  backgroundGradientTo: "#08130D",
+  backgroundGradientToOpacity: 0.5,
+  color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
+  strokeWidth: 2, // optional, default 3
+  barPercentage: 0.5
+};
+
     return (
      
       
@@ -37,42 +61,13 @@ export default class HistoryScreen extends React.Component {
 
 
         <View>
-          <Text>
-            Bezier Line Chart
-      </Text>
-          <LineChart
-            data={{
-              labels: ['January', 'February', 'March', 'April', 'May', 'June'],
-              datasets: [{
-                data: [
-                  Math.random() * 100,
-                  Math.random() * 100,
-                  Math.random() * 100,
-                  Math.random() * 100,
-                  Math.random() * 100,
-                  Math.random() * 100
-                ]
-              }]
-            }}
-            width={Dimensions.get('window').width} // from react-native
-            height={220}
-            chartConfig={{
-              backgroundColor: '#e26a00',
-              backgroundGradientFrom: '#fb8c00',
-              backgroundGradientTo: '#ffa726',
-              decimalPlaces: 2, // optional, defaults to 2dp
-              color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
-              style: {
-                borderRadius: 16
-              }
-            }}
-            bezier
-            style={{
-              marginVertical: 8,
-              borderRadius: 16
-            }}
-          />
-        </View>
+        <LineChart
+          data={data}
+          width={screenWidth}
+           height={220}
+          chartConfig={chartConfig}
+        />
+    </View>
 
         <View style={styles.container}>
           <Table borderStyle={{ borderWidth: 2, borderColor: '#c8e1ff' }}>

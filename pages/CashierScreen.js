@@ -18,12 +18,7 @@ export default class CashierScreen extends React.Component {
 
   render() {
     return (
-<LinearGradient 
-     colors={['pink','blue']}
-     style = { styles.containerg }
-     start={{ x: 1, y: 1 }}
-end={{ x: 0, y: 1.5 }}>     
-      <View>
+      <View style={{backgroundColor:'#23232D',flex:1}}>
         <View style={styles.container}>
           <View style={styles.navBar}>
             <Text style={styles.navBarButton}>Immortal</Text>
@@ -57,7 +52,7 @@ end={{ x: 0, y: 1.5 }}>
         </View>
       </View>
 
-      </LinearGradient>
+    
 
     );
   }
@@ -71,30 +66,35 @@ const styles = StyleSheet.create({
 
   container: {
     flex: 0,
-    //backgroundColor: '#374046',
-
+   
   },
   navBarButton: {
-    color: 'blue',
+    color: 'green',
     textAlign: 'center',
     width: 85,
+    
     marginLeft:10,
     fontWeight: 'bold',
     fontSize:20,
+    marginBottom:10,
     
   },
   navBarHeader: {
     flex: 1,
-    color: 'blue',
-    
-    textAlign: 'center'
+    color: 'green',
+    textAlign: 'center',
+    marginBottom:10,
+
   },
   navBar: {
     flexDirection: 'row',
-    paddingTop: 30,
+    paddingTop: 10,
     height: 64,
-   // backgroundColor: '#1EAAF1'
-  },
+    backgroundColor: 'black',
+    borderWidth:2,
+    borderColor:'gold',
+    alignItems: 'center',
+    },
 
   content: {
     flex: 1,
@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     padding: 19,
-    color: 'blue',
+    color: 'green',
     fontSize: 18,
     fontWeight:"bold",
   }
