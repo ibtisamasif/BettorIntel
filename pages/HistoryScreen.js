@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import {LineChart} from 'react-native-line-chart';
 import {Table, Row, Rows} from 'react-native-table-component';
+import {height, width, totalSize} from 'react-native-dimension';
 
 export default class HistoryScreen extends React.Component {
   constructor(props) {
@@ -25,8 +26,6 @@ export default class HistoryScreen extends React.Component {
 
   render() {
     const state = this.state;
-    const screenWidth = Dimensions.get('window').width;
-
     const data = {
       labels: ['Jan', 'Feb', 'March', 'April', 'May', 'June'],
       datasets: [
@@ -64,8 +63,8 @@ export default class HistoryScreen extends React.Component {
           <LineChart
             style={styles.linechart}
             data={data}
-            width={350}
-            height={230}
+            width={totalSize(48)}
+            height={totalSize(25)}
             chartConfig={chartConfig}
           />
         </View>
@@ -112,7 +111,7 @@ const styles = StyleSheet.create({
   containerChart: {
     padding: 15,
     paddingTop: 15,
-    alignItems: "center",
+    alignItems: 'center',
   },
   containerTable: {
     padding: 15,
@@ -124,7 +123,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#202420',
   },
   linechart: {
-    marginTop: 15,
+    marginTop: totalSize(1.5),
     //backgroundColor:'red'
   },
 });
