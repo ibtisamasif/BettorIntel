@@ -1,5 +1,11 @@
 import React from 'react';
-import {Text, View, StyleSheet, Dimensions,ImageBackground} from 'react-native';
+import {
+  Text,
+  View,
+  StyleSheet,
+  Dimensions,
+  ImageBackground,
+} from 'react-native';
 import {LineChart} from 'react-native-line-chart';
 import {Table, Row, Rows} from 'react-native-table-component';
 
@@ -33,19 +39,19 @@ export default class HistoryScreen extends React.Component {
     };
 
     const chartConfig = {
-        
-    backgroundGradientFrom: '#000',
+      backgroundGradientFrom: '#000',
       //backgroundGradientFromOpacity:1,
       //backgroundGradientTo: '#080B14',
-      //backgroundGradientToOpacity: 0, 
+      //backgroundGradientToOpacity: 0,
       color: (opacity = 0) => `rgba(255, 215, 100, ${opacity})`,
       //strokeWidth: 20, // optional, default 3
       //barPercentage: 0.5,
     };
 
     return (
-      <ImageBackground source={require('./../image/back.jpg')} style={{flex:1,width: '100%', height: '100%'}}>
-     
+      <ImageBackground
+        source={require('./../image/back.jpg')}
+        style={{flex: 1, width: '100%', height: '100%'}}>
         <View style={styles.containernav}>
           <View style={styles.navBar}>
             <Text style={styles.navBarButton}>Immortal</Text>
@@ -54,19 +60,20 @@ export default class HistoryScreen extends React.Component {
           </View>
         </View>
 
-        <View>
+        <View style={styles.containerChart}>
           <LineChart
             style={styles.linechart}
             data={data}
-            width={330}
+            width={350}
             height={230}
             chartConfig={chartConfig}
-            
           />
         </View>
 
-        <View style={styles.container}>
-          <Table style={styles.table} borderStyle={{borderWidth: 3, borderColor: '#000',}}>
+        <View style={styles.containerTable}>
+          <Table
+            style={styles.table}
+            borderStyle={{borderWidth: 3, borderColor: '#000'}}>
             <Row
               data={state.tableHead}
               style={styles.head}
@@ -75,14 +82,12 @@ export default class HistoryScreen extends React.Component {
             <Rows data={state.tableData} textStyle={styles.text} />
           </Table>
         </View>
-           </ImageBackground>
+      </ImageBackground>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  
-
   containernav: {
     flex: 0,
     backgroundColor: '#374046',
@@ -104,19 +109,22 @@ const styles = StyleSheet.create({
     height: 64,
     backgroundColor: '#1EAAF1',
   },
-
-  container: {padding: 15, paddingTop: 15, },
-  head: {height: 40, backgroundColor:'#000',},
-  text: {margin:6, color:'#ffd700',textAlign:'center'},
-  table:{
-    backgroundColor:'#202420',
-    
+  containerChart: {
+    padding: 15,
+    paddingTop: 15,
+    alignItems: "center",
   },
-
-  linechart:{
-   marginTop:15,
-   marginHorizontal:15,
-   //backgroundColor:'red' 
-       
+  containerTable: {
+    padding: 15,
+    paddingTop: 15,
+  },
+  head: {height: 40, backgroundColor: '#000'},
+  text: {margin: 6, color: '#ffd700', textAlign: 'center'},
+  table: {
+    backgroundColor: '#202420',
+  },
+  linechart: {
+    marginTop: 15,
+    //backgroundColor:'red'
   },
 });
