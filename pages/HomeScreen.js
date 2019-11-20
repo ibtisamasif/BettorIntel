@@ -1,7 +1,8 @@
 import React from 'react';
-import {StyleSheet, View, Text, ScrollView} from 'react-native';
+import {StyleSheet, View, Text, ScrollView,ImageBackground,Image} from 'react-native';
 import {Table, Row} from 'react-native-table-component';
-import LinearGradient from 'react-native-linear-gradient';
+import NavHeade from './components/NavHeade.js';
+
 export default class HomeScreen extends React.Component {
   constructor(props) {
     super(props);
@@ -15,19 +16,11 @@ export default class HomeScreen extends React.Component {
   render() {
     const state = this.state;
     return (
-      <LinearGradient colors={['#6e45e2', '#88d3ce']} style={styles.containerg}>
-        <View style={{flex: 1}}>
-          <View style={styles.containernav}>
-            <View style={styles.navBar}>
-              <Text style={styles.navBarButton}>Immortal</Text>
-              <Text style={styles.navBarHeader}>Image Circle</Text>
-              <Text style={styles.navBarButton}>Picks</Text>
-            </View>
-          </View>
-
+      <ImageBackground source={require('./../image/back.jpg')} style={{flex:1,width: '100%', height: '100%'}}>
+          <NavHeade />
           <View style={styles.container}>
             <ScrollView style={styles.dataWrapper}>
-              <Table borderStyle={{borderWidth: 2, borderColor: '#c8e1ff'}}>
+              <Table style={styles.table} borderStyle={{borderWidth: 2, borderColor: '#000'}}>
                 <Row
                   data={state.tableHead}
                   widthArr={[160, 83, 83]}
@@ -82,40 +75,21 @@ export default class HomeScreen extends React.Component {
               </Table>
             </ScrollView>
           </View>
-        </View>
-      </LinearGradient>
+          </ImageBackground>
+      
     );
   }
 }
 
 const styles = StyleSheet.create({
   dataWrapper: {marginTop: -1},
-  containernav: {
-    flex: 0,
-    backgroundColor: '#374046',
+  
+  container: {padding: 16, paddingTop: 30},
+  head: {height: 50, backgroundColor: '#000'},
+  text: {margin: 6, height: 30,color:'#ffd700',textAlign:'center',paddingTop:5 },
+  table:{
+    backgroundColor:'#202420',
+    
   },
-  containerg: {
-    flex: 1,
-    backgroundColor: '#854046',
-  },
-  navBarButton: {
-    color: '#FFFFFF',
-    textAlign: 'center',
-    width: 64,
-  },
-  navBarHeader: {
-    flex: 1,
-    color: '#FFFFFF',
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-  navBar: {
-    flexDirection: 'row',
-    paddingTop: 30,
-    height: 64,
-    backgroundColor: '#1EAAF1',
-  },
-  container: {flex: 0, padding: 16, paddingTop: 30, backgroundColor: '#fff'},
-  head: {height: 40, backgroundColor: '#f1f8ff'},
-  text: {margin: 6, height: 40},
+
 });

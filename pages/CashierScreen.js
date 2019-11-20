@@ -1,6 +1,8 @@
 import React from 'react';
 import {Alert, Text, View, TouchableOpacity, StyleSheet,ImageBackground} from 'react-native';
 
+import NavHeade from './components/NavHeade.js';
+
 export default class CashierScreen extends React.Component {
   _onPressButton() {
     Alert.alert('You tapped the button!');
@@ -14,13 +16,7 @@ export default class CashierScreen extends React.Component {
     return (
       <ImageBackground source={require('./../image/back.jpg')} style={{flex:1,width: '100%', height: '100%'}}>
      
-        <View style={styles.container}>
-          <View style={styles.navBar}>
-            <Text style={styles.navBarButton}>Immortal</Text>
-            <Text style={styles.navBarHeader}>ImageCircle</Text>
-            <Text style={styles.navBarButton}>Picks</Text>
-          </View>
-        </View>
+            <NavHeade /> 
           <View
             style={{
               justifyContent: 'center',
@@ -57,37 +53,7 @@ export default class CashierScreen extends React.Component {
   }
 }
 const styles = StyleSheet.create({
-  containerg: {
-    flex: 1,
-  },
-
-  container: {
-    flex: 0,
-  },
-  navBarButton: {
-    color: 'green',
-    textAlign: 'center',
-    width: 85,
-    marginLeft: 10,
-    fontWeight: 'bold',
-    fontSize: 20,
-    marginBottom: 10,
-  },
-  navBarHeader: {
-    flex: 1,
-    color: 'green',
-    textAlign: 'center',
-    marginBottom: 10,
-  },
-  navBar: {
-    flexDirection: 'row',
-    paddingTop: 10,
-    height: 64,
-    backgroundColor: 'black',
-    borderWidth: 2,
-    borderColor: 'gold',
-    alignItems: 'center',
-  },
+  
   content: {
     flex: 1,
     justifyContent: 'center',
@@ -110,4 +76,5 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
   },
+  
 });
