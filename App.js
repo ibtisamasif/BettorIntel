@@ -6,6 +6,7 @@ import {createStackNavigator} from 'react-navigation-stack';
 import HistoryScreen from './pages/HistoryScreen';
 import HomeScreen from './pages/HomeScreen';
 import CashierScreen from './pages/CashierScreen';
+import TabBar from './Common/TabBar';
 const HistoryStack = createStackNavigator(
   {
     History: {screen: HistoryScreen},
@@ -74,9 +75,11 @@ const App = createBottomTabNavigator(
         return <IconComponent name={iconName} size={25} color={tintColor} />;
       },
     }),
+    initialRouteName: 'Home',
+    tabBarComponent: TabBar,
     tabBarOptions: {
-      activeTintColor: '#42f44b',
-      inactiveTintColor: 'gray',
+      activeTintColor: '#009972',
+      inactiveTintColor: '#146150',
     },
   },
 );
