@@ -11,7 +11,7 @@ export default class HistoryScreen extends React.Component {
     this.state = {
       tableHead: ['Name', 'Win', 'Unit'],
       tableData: [
-        ['DAL VS PHI', '2', ''],
+        ['DAL VS PHI', '2', 'c'],
         ['DAL VS PHI', 'b', 'c'],
         ['DAL VS PHI', '2', '3'],
         ['DAL VS PHI', 'b', 'c'],
@@ -33,12 +33,12 @@ export default class HistoryScreen extends React.Component {
     };
 
     const chartConfig = {
-      backgroundGradientFrom: '#000',
+      //backgroundGradientFrom: '#000',
       //backgroundGradientFromOpacity:1,
       //backgroundGradientTo: '#080B14',
       //backgroundGradientToOpacity: 0,
-      color: (opacity = 0) => `rgba(255, 215, 100, ${opacity})`,
-      //strokeWidth: 20, // optional, default 3
+      color: (opacity = 1) => `rgba(250, 250, 0, ${opacity})`,
+            //strokeWidth: 20, // optional, default 3
       //barPercentage: 0.5,
     };
     return (
@@ -46,11 +46,11 @@ export default class HistoryScreen extends React.Component {
         source={require('./../image/back.jpg')}
         style={{flex: 1, width: '100%', height: '100%'}}>
         <NavHeade />
-        <View>
+        <View >
           <LineChart
             style={styles.linechart}
             data={data}
-            width={totalSize(48)}
+            width={totalSize(45)}
             height={totalSize(25)}
             chartConfig={chartConfig}
           />
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#202420',
   },
   linechart: {
-    marginTop: totalSize(1.5),
-    //backgroundColor:'red'
+    marginTop: totalSize(3.1),
+    margin:10,
   },
 });

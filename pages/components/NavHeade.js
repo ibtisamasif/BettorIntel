@@ -29,15 +29,18 @@ const styles = StyleSheet.create({
    
    width: 85,
    marginLeft: 10,
-   //fontWeight: 'bold',
+   fontWeight: 'bold',
    fontSize: 16,
+   fontFamily:'ariel',
    marginBottom: 10,
  },
  navBarHeader: {
    flex: 1,
   marginLeft:40,
+  marginTop:15,
   marginRight:40,
   padding:50,    
+ // height:10,
  },
  navBar: {
    flexDirection: 'row',

@@ -9,7 +9,7 @@ export default class HomeScreen extends React.Component {
     this.state = {
       tableHead: ['Game', 'Pick', 'Unit'],
       tableData: [['DAL VS PHI'], ['importal Picks'], ['importal Picks']],
-      widthArr: [160, 165],
+      widthArr: [160, 200],
     };
   }
 
@@ -20,10 +20,10 @@ export default class HomeScreen extends React.Component {
           <NavHeade />
           <View style={styles.container}>
             <ScrollView style={styles.dataWrapper}>
-              <Table style={styles.table} borderStyle={{borderWidth: 2, borderColor: 'green'}}>
+              <Table style={styles.table} borderStyle={{borderWidth: 2, borderColor: '#000'}}>
                 <Row
                   data={state.tableHead}
-                  widthArr={[160, 83, 83]}
+                  widthArr={[160, 83, 116]}
                   style={styles.head}
                   textStyle={styles.text}
                 />
@@ -49,7 +49,7 @@ export default class HomeScreen extends React.Component {
                 />
                 <Row
                   data={[['DAL VS PH'], ['SF-1'], ['1']]}
-                  widthArr={[160, 83, 82]}
+                  widthArr={[160, 83, 116]}
                   textStyle={styles.text}
                 />
                 <Row
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
   text: {margin: 6, height: 30,color:'#ffd700',textAlign:'center',paddingTop:5 },
   table:{
     backgroundColor:'#202420',
-    
+    marginTop:6,
   },
 
 });
