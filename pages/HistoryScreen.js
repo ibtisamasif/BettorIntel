@@ -38,7 +38,7 @@ export default class HistoryScreen extends React.Component {
       //backgroundGradientTo: '#080B14',
       //backgroundGradientToOpacity: 0,
       color: (opacity = 1) => `rgba(250, 250, 0, ${opacity})`,
-            //strokeWidth: 20, // optional, default 3
+      //strokeWidth: 20, // optional, default 3
       //barPercentage: 0.5,
     };
     return (
@@ -83,13 +83,8 @@ const styles = StyleSheet.create({
     padding: 15,
     paddingTop: 15,
   },
-  head: {height: 40, backgroundColor: '#000'},
-  text: {margin: 6, color: '#ffd700', textAlign: 'center'},
-  table: {
-    backgroundColor: '#202420',
-  },
   linechart: {
     marginTop: totalSize(3.1),
-    margin:10,
+    margin: 10,
   },
 });
