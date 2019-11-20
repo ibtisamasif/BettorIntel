@@ -7,7 +7,7 @@ export default class HomeScreen extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      tableHead: ['Head', 'Head2', 'Head3'],
+      tableHead: ['Game', 'Pick', 'Unit'],
       tableData: [['DAL VS PHI'], ['importal Picks'], ['importal Picks']],
       widthArr: [160, 165],
     };
@@ -20,7 +20,7 @@ export default class HomeScreen extends React.Component {
           <NavHeade />
           <View style={styles.container}>
             <ScrollView style={styles.dataWrapper}>
-              <Table style={styles.table} borderStyle={{borderWidth: 2, borderColor: '#000'}}>
+              <Table style={styles.table} borderStyle={{borderWidth: 2, borderColor: 'green'}}>
                 <Row
                   data={state.tableHead}
                   widthArr={[160, 83, 83]}
