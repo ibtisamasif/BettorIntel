@@ -1,6 +1,5 @@
 import React from 'react';
-import {Alert, Text, View, TouchableOpacity, StyleSheet} from 'react-native';
-import LinearGradient from 'react-native-linear-gradient';
+import {Alert, Text, View, TouchableOpacity, StyleSheet,ImageBackground} from 'react-native';
 
 export default class CashierScreen extends React.Component {
   _onPressButton() {
@@ -13,7 +12,8 @@ export default class CashierScreen extends React.Component {
 
   render() {
     return (
-      <View style={{backgroundColor: '#23232D', flex: 1}}>
+      <ImageBackground source={require('./../image/back.jpg')} style={{flex:1,width: '100%', height: '100%'}}>
+     
         <View style={styles.container}>
           <View style={styles.navBar}>
             <Text style={styles.navBarButton}>Immortal</Text>
@@ -51,7 +51,8 @@ export default class CashierScreen extends React.Component {
               </View>
             </TouchableOpacity>
           </View>
-        </View>
+      
+        </ImageBackground>
     );
   }
 }
