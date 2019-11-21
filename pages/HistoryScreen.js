@@ -46,12 +46,12 @@ export default class HistoryScreen extends React.Component {
         source={require('./../image/back.jpg')}
         style={{flex: 1, width: '100%', height: '100%'}}>
         <NavHeade />
-        <View >
+        <View>
           <LineChart
             style={styles.linechart}
             data={data}
-            width={totalSize(45)}
-            height={totalSize(25)}
+            width={totalSize(47)}
+            height={totalSize(27)}
             chartConfig={chartConfig}
           />
         </View>
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
     paddingTop: 15,
   },
   linechart: {
-    marginTop: totalSize(3.1),
+    marginTop: totalSize(4.3),
     margin: 10,
   },
 });
