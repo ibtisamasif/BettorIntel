@@ -42,17 +42,17 @@ const TabBar = props => {
                 style={Styles.scalerOnline}
                 pose={isRouteActive ? 'active' : 'inactive'}>
                 {renderIcon({route, focused: isRouteActive, tintColor})}
-                <Text style={Styles.iconTextOnline}>
+                {/* <Text style={Styles.iconTextOnline}>
                   {getLabelText({route})}
-                </Text>
+                </Text> */}
               </Scaler>
             ) : (
               // normal icon normal processing
               <Scaler
                 style={Styles.scaler}
                 pose={isRouteActive ? 'active' : 'inactive'}>
-                {renderIcon({route, focused: isRouteActive, tintColor})}
-                <Text style={Styles.iconText}>{getLabelText({route})}</Text>
+                {/* {renderIcon({route, focused: isRouteActive, tintColor})} */}
+                <Text style={Styles.iconTextOnline}>{getLabelText({route})}</Text>
               </Scaler>
             )}
           </TouchableNativeFeedback>
