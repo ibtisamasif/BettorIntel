@@ -7,6 +7,8 @@ import HistoryScreen from './pages/HistoryScreen';
 import HomeScreen from './pages/HomeScreen';
 import CashierScreen from './pages/CashierScreen';
 import TabBar from './Common/TabBar';
+import Icon from './Common/Icon';
+
 const HistoryStack = createStackNavigator(
   {
     History: {screen: HistoryScreen},
@@ -66,13 +68,22 @@ const App = createBottomTabNavigator(
         let IconComponent = Ionicons;
         let iconName;
         if (routeName === 'Home') {
-          iconName = `ios-information-circle${focused ? '' : '-outline'}`;
+          var soureImge;
+          if (tintColor === '#CBCBCB') {
+            soureImge = 'onHome';
+          } else {
+            soureImge = 'onHomeActive';
+          }
+          return <Icon name={soureImge} size={48} color={tintColor} />;
+          // iconName = `ios-information-circle${focused ? '' : '-outline'}`;
+          // return <IconComponent name={iconName} size={25} color={tintColor} />;
         } else if (routeName === 'History') {
           iconName = `ios-checkmark-circle${focused ? '' : '-outline'}`;
+          return <IconComponent name={iconName} size={25} color={tintColor} />;
         } else if (routeName === 'Cashier') {
           iconName = `ios-checkmark-circle${focused ? '' : '-outline'}`;
+          return <IconComponent name={iconName} size={25} color={tintColor} />;
         }
-        return <IconComponent name={iconName} size={25} color={tintColor} />;
       },
     }),
     initialRouteName: 'Home',

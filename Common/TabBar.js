@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  TouchableOpacity,
-  TouchableNativeFeedback,
-  Dimensions,
-} from 'react-native';
+import {Text, StyleSheet, TouchableNativeFeedback} from 'react-native';
 import posed from 'react-native-pose';
 
 const Scaler = posed.View({
@@ -49,7 +42,9 @@ const TabBar = props => {
                 style={Styles.scalerOnline}
                 pose={isRouteActive ? 'active' : 'inactive'}>
                 {renderIcon({route, focused: isRouteActive, tintColor})}
-                <Text style={Styles.iconTextOnline}>{getLabelText({route})}</Text>
+                <Text style={Styles.iconTextOnline}>
+                  {getLabelText({route})}
+                </Text>
               </Scaler>
             ) : (
               // normal icon normal processing

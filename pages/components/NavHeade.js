@@ -44,7 +44,6 @@ const styles = StyleSheet.create({
   },
   navBar: {
     flexDirection: 'row',
-
     paddingTop: 10,
     height: 64,
     backgroundColor: 'black',
