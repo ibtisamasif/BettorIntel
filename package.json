@@ -13,6 +13,7 @@
     "react": "16.9.0",
     "react-native": "0.61.4",
     "react-native-chart-kit": "^3.11.0",
+    "react-native-custom-checkbox": "^1.5.2",
     "react-native-dimension": "^1.0.6",
     "react-native-gesture-handler": "^1.5.0",
     "react-native-line-chart": "^1.0.4",
