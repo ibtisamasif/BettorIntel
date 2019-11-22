@@ -74,7 +74,7 @@ const App = createBottomTabNavigator(
           } else {
             soureImge = 'onHomeActive';
           }
-          return <Icon name={soureImge} size={48} color={tintColor} />;
+          return <Icon name={soureImge} size={68} color={tintColor} />;
           // iconName = `ios-information-circle${focused ? '' : '-outline'}`;
           // return <IconComponent name={iconName} size={25} color={tintColor} />;
         } else if (routeName === 'History') {
