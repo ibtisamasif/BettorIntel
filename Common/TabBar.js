@@ -52,7 +52,9 @@ const TabBar = props => {
                 style={Styles.scaler}
                 pose={isRouteActive ? 'active' : 'inactive'}>
                 {/* {renderIcon({route, focused: isRouteActive, tintColor})} */}
-                <Text style={Styles.iconTextOnline}>{getLabelText({route})}</Text>
+                <Text style={Styles.iconTextOnline}>
+                  {getLabelText({route})}
+                </Text>
               </Scaler>
             )}
           </TouchableNativeFeedback>
@@ -68,16 +70,17 @@ const Styles = StyleSheet.create({
     height: 53,
     borderWidth: 1,
     borderRadius: 1,
-    borderColor: '#EEEEEE',
+    borderColor: '#ffd700',
     shadowOffset: {width: 5, height: 10},
     shadowOpacity: 0.75,
     elevation: 1,
-    backgroundColor: '#212227',
+    backgroundColor: 'black',
   },
   tabButton: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: '#ee0000',
   },
   spotLight: {
     width: '100%',
@@ -97,7 +100,7 @@ const Styles = StyleSheet.create({
     justifyContent: 'center',
   },
   scalerOnline: {
-    // height: 20,
+    height: 30,
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
@@ -109,7 +112,8 @@ const Styles = StyleSheet.create({
   },
   iconTextOnline: {
     color: '#009972',
-    fontSize: 12,
+    fontSize: 18,
+    fontWeight: 'bold',
     lineHeight: 20,
   },
 });
