@@ -24,7 +24,7 @@ export default class NavHead extends React.Component {
           <Text style={styles.navBarButton}>IMMORTAL</Text>
           <Image
             style={styles.navBarHeader}
-            source={require('../../image/Webp.net-resizeimage1.png')}
+            source={require('../../image/im.png')}
           />
           <Text style={styles.navBarButton}>PICKS</Text>
         </View>

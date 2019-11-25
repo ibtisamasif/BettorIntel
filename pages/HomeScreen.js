@@ -95,16 +95,17 @@ const styles = StyleSheet.create({
   dataWrapper: {marginTop: -1},
 
   container: {padding: 16, paddingTop: 30},
-  head: {height: 50, backgroundColor: '#000'},
+  head: {height: 50, backgroundColor: 'green'},
   text: {
     margin: 6,
     height: 30,
-    color: '#5cdb95',
+    color: 'white',
     textAlign: 'center',
     paddingTop: 5,
+    //color: 'white',
   },
   table: {
-    // backgroundColor: '#202420',
+    backgroundColor: '#202420',
     //backgroundColor: '',
     marginTop: 6,
   },
