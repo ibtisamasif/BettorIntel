@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  View,
-  StyleSheet,
-  ImageBackground,
-  CheckBox,
-  Alert,
-  RadioForm,
-} from 'react-native';
+import {View, StyleSheet, ImageBackground} from 'react-native';
 import {LineChart} from 'react-native-line-chart';
 import {Table, Row, TableWrapper, Cell} from 'react-native-table-component';
 import {totalSize} from 'react-native-dimension';
@@ -57,25 +50,25 @@ export default class HistoryScreen extends React.Component {
       labels: ['Jan', 'Feb', 'March', 'April', 'May', 'June'],
       datasets: [
         {
-          data: [20, 45, 28, 80, 99, 43],
-          color: (opacity = 1) => `rgba(134, 65, 244, ${opacity})`, // optional
+          data: [50, 70, 40, 60, 80, 40],
+          color: (opacity = 1) => `rgba(0, 0, 244, ${opacity})`, // optional
           strokeWidth: 2, // optional
         },
       ],
     };
 
     const chartConfig = {
-      //backgroundGradientFrom: '#000',
-      //backgroundGradientFromOpacity:1,
-      //backgroundGradientTo: '#080B14',
-      //backgroundGradientToOpacity: 0,
-      color: (opacity = 1) => `rgba(250, 250, 0, ${opacity})`,
-      //strokeWidth: 20, // optional, default 3
-      //barPercentage: 0.5,
+      backgroundGradientFrom: '#202420',
+      backgroundGradientFromOpacity: 0,
+      backgroundGradientTo: '#080B14',
+      backgroundGradientToOpacity: 1,
+      color: (opacity = 1) => `rgba(150, 255, 100, ${opacity})`,
+      strokeWidth: 20, // optional, default 3
+      barPercentage: 1,
     };
     return (
       <ImageBackground
-        source={require('./../image/back.jpg')}
+        source={require('./../image/background2.jpg')}
         style={{flex: 1, width: '100%', height: '100%'}}>
         <NavHeade />
         <View>
@@ -89,7 +82,9 @@ export default class HistoryScreen extends React.Component {
         </View>
 
         <View style={styles.container}>
-          <Table borderStyle={{borderColor: 'black'}} style={styles.table}>
+          <Table
+            borderStyle={{borderColor: 'black', borderWidth: 1}}
+            style={styles.table}>
             <Row
               data={state.tableHead}
               style={styles.head}
@@ -120,8 +115,8 @@ export default class HistoryScreen extends React.Component {
 }
 const styles = StyleSheet.create({
   container: {padding: 15, paddingTop: 15},
-  head: {height: 40, backgroundColor: '#000'},
-  text: {margin: 6, color: '#ffd700', textAlign: 'center'},
+  head: {height: 40, backgroundColor: 'green'},
+  text: {margin: 6, color: 'white', textAlign: 'center', fontSize: 13},
   table: {
     backgroundColor: '#202420',
   },

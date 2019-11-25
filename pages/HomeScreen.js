@@ -99,12 +99,13 @@ const styles = StyleSheet.create({
   text: {
     margin: 6,
     height: 30,
-    color: '#ffd700',
+    color: '#5cdb95',
     textAlign: 'center',
     paddingTop: 5,
   },
   table: {
-    backgroundColor: '#202420',
+    // backgroundColor: '#202420',
+    //backgroundColor: '',
     marginTop: 6,
   },
 });

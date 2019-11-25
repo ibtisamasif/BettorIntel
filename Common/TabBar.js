@@ -70,11 +70,11 @@ const Styles = StyleSheet.create({
     height: 53,
     borderWidth: 1,
     borderRadius: 1,
-    borderColor: '#ffd700',
+    //borderColor: '#ffd700',
     shadowOffset: {width: 5, height: 10},
     shadowOpacity: 0.75,
     elevation: 1,
-    backgroundColor: 'black',
+    backgroundColor: '#1c3d1d',
   },
   tabButton: {
     flex: 1,
@@ -104,6 +104,7 @@ const Styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    padding: 25,
   },
   iconText: {
     color: '#000000',
@@ -111,7 +112,7 @@ const Styles = StyleSheet.create({
     lineHeight: 20,
   },
   iconTextOnline: {
-    color: '#009972',
+    color: 'white',
     fontSize: 18,
     fontWeight: 'bold',
     lineHeight: 20,
