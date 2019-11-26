@@ -40,11 +40,10 @@ export default class CashierScreen extends React.Component {
             </View>
 
             <LinearGradient
-            start={{x: 0, y: 0}}
-            end={{x: 1, y: 0}}
-            colors={['#191919', 'green']}
-            style={styles.button}>
-         
+              start={{x: 0, y: 0}}
+              end={{x: 1, y: 0}}
+              colors={['#191919', 'green']}
+              style={styles.button}>
               <Text style={styles.buttonText}>1 year Unlimited</Text>
               <View style={styles.SeparatorLine} />
               <Text style={styles.buttonText1}>$150 </Text>
@@ -54,12 +53,11 @@ export default class CashierScreen extends React.Component {
           <TouchableOpacity
             onPress={this._onPressButton}
             onLongPress={this._onLongPressButton}>
-                 <LinearGradient
-            start={{x: 0, y: 0}}
-            end={{x: 1, y: 0}}
-            colors={['#191919', 'green']}
-            style={styles.button}>
-         
+            <LinearGradient
+              start={{x: 0, y: 0}}
+              end={{x: 1, y: 0}}
+              colors={['#191919', 'green']}
+              style={styles.button}>
               <Text style={styles.buttonText}>50 Credits</Text>
               <View style={styles.SeparatorLine} />
               <Text style={styles.buttonText1}> $25 </Text>
@@ -69,35 +67,30 @@ export default class CashierScreen extends React.Component {
           <TouchableOpacity
             onPress={this._onPressButton}
             onLongPress={this._onLongPressButton}>
-                 <LinearGradient
-            start={{x: 0, y: 0}}
-            end={{x: 1, y: 0}}
-            colors={['#191919', 'green']}
-            style={styles.button}>
-         
+            <LinearGradient
+              start={{x: 0, y: 0}}
+              end={{x: 1, y: 0}}
+              colors={['#191919', 'green']}
+              style={styles.button}>
               <Text style={styles.buttonText}>20 Credits</Text>
               <View style={styles.SeparatorLine} />
               <Text style={styles.buttonText1}> $15 </Text>
             </LinearGradient>
           </TouchableOpacity>
 
-            <TouchableOpacity
-              onPress={this._onPressButton}
-              onLongPress={this._onLongPressButton}>
-              <LinearGradient
-            start={{x: 0, y: 0}}
-            end={{x: 1, y: 0}}
-            colors={['#191919', 'green']}
-            style={styles.button}>
-          
-              
-                <Text style={styles.buttonText}>5 Credits</Text>
-                <View style={styles.SeparatorLine} />
-                <Text style={styles.buttonText1}> $5 </Text>
-              
-              </LinearGradient>
-            </TouchableOpacity>
-          
+          <TouchableOpacity
+            onPress={this._onPressButton}
+            onLongPress={this._onLongPressButton}>
+            <LinearGradient
+              start={{x: 0, y: 0}}
+              end={{x: 1, y: 0}}
+              colors={['#191919', 'green']}
+              style={styles.button}>
+              <Text style={styles.buttonText}>5 Credits</Text>
+              <View style={styles.SeparatorLine} />
+              <Text style={styles.buttonText1}> $5 </Text>
+            </LinearGradient>
+          </TouchableOpacity>
         </View>
       </ImageBackground>
     );
